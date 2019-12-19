@@ -1,4 +1,6 @@
+import javafx.embed.swing.JFXPanel;
 import java.util.ArrayList;
+import javax.swing.*;
 
 public class Testing {
 
@@ -6,21 +8,23 @@ public class Testing {
 
     public static void main(String[] args){
 
-        //Animal får = new Animal();
-        //får.doStuff();
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
 
-        //int test = 100;
-        //String iTest = får.convInt(test);
-        //System.out.println(iTest + 7);
+                new MainFrame();
 
+            }
+
+        });
+
+        //Testing threads
+        /*
         Thread getInput = new GetInput();
         Thread Count = new Count();
 
         Count.start();
         getInput.start();
-
+        */
 
     }
-
-
 }
